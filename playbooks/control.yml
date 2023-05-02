@@ -1,0 +1,10 @@
+---
+  - hosts: control
+    become: true
+    tasks:
+      - name: install tools
+        apt: 
+          name=curl
+          name=bc
+          state=present 
+          update_cache=yes
